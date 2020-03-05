@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+    <form action="" method="post">
+        <div class="input-group mb-2">
+            <input type="text" name="sentence" class="form-control" placeholder="Type something to capitalize every other letter">
+            <div class="input-group-append">
+                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+        <div class="input-group mb-2">
+            <input type="text" name="sentence2" class="form-control" placeholder="Type something to change all spaces to dashes">
+            <div class="input-group-append">
+                <button type="submit" name="submit2" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+    <p>{{ sentence }}</p>
+    <p>{{ sentence2 }}</p>
+
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ '/var/www/Twig/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
+        <li>Your template at <code><a href="{{ '/var/www/Twig/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
+    </ul>
+</div>
+{% endblock %}
