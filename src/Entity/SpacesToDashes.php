@@ -6,10 +6,14 @@ namespace App\Entity;
 
 class SpacesToDashes implements transform
 {
-    public function transform(string $input) : string
+    public function transform(string $input): string
     {
         $str = strtolower($input);
-        return str_replace(' ', '-', $str);
+        $spacesToDashes = str_replace(' ', '-', $str);
+        $logMessage = new LoggerInfo();
+        $logMessage->logInfo($spacesToDashes);
+        return $spacesToDashes;
+
     }
 
 }
